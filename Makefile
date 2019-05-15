@@ -16,7 +16,7 @@ CC_FLAGS=$(O_FLAGS) -std=c99
 LIBS=
 INCLUDE=
 OBJS=ipc.o
-BINS=
+BINS=example
 
 
 # Default generic instructions
@@ -28,4 +28,5 @@ clean:
 %.o:	%.cpp %.hpp
 	$(CXX) $(CXX_FLAGS) -c $(INCLUDE) -o $@ $< $(LIBS) 
 	
-
+example:	example.cpp $(OBJS)
+	$(CXX) $(CXX_FLAGS) $(INCLUDE) -o $@ $< $(OBJS) $(LIBS) 

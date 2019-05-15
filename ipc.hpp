@@ -182,7 +182,9 @@ public:
 	void destroy(void);
 
 
+	/** Get the actual memory segment */
 	void *get(void) const;
+	/** Get the actual memory segment */
 	void *operator*(void) const;
 
 	/**
@@ -246,7 +248,6 @@ public:
 	 * */
 	Semaphore(int key, int attr = 0600);
 
-	/** Destroy given semaphore */
 	virtual ~Semaphore();
 
 	/** Get the key of the semaphore */
