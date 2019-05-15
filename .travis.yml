@@ -1,0 +1,10 @@
+
+language: cpp
+compiler:
+  - gcc
+  - clang
+
+dist: xenial
+
+script:
+  - make
